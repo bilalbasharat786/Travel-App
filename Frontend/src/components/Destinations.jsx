@@ -1,8 +1,8 @@
-import React from 'react';
-import RomeImg from '../assets/rome.png';
-import LondonImg from '../assets/london.jpg';
-import EuropeImg from '../assets/europe.png';
-import NavigationIcon from '../assets/navigation.png';
+import React from "react";
+import RomeImg from "../assets/rome.png";
+import LondonImg from "../assets/london.jpg";
+import EuropeImg from "../assets/europe.png";
+import NavigationIcon from "../assets/navigation.png";
 
 const Destinations = () => {
   const destinations = [
@@ -11,31 +11,43 @@ const Destinations = () => {
       image: RomeImg,
       location: "Rome, Italy",
       price: "$5,42k",
-      duration: "10 Days Trip"
+      duration: "10 Days Trip",
     },
     {
       id: 2,
       image: LondonImg,
       location: "London, UK",
       price: "$4.2k",
-      duration: "12 Days Trip"
+      duration: "12 Days Trip",
     },
     {
       id: 3,
       image: EuropeImg,
       location: "Full Europe",
       price: "$15k",
-      duration: "28 Days Trip"
-    }
+      duration: "28 Days Trip",
+    },
   ];
 
   return (
-    <section id="destinations" className="py-20 px-6 max-w-7xl mx-auto relative overflow-hidden">
-
+    <section
+      id="destinations"
+      className="py-20 px-6 max-w-7xl mx-auto relative overflow-hidden"
+    >
       <div className="absolute right-0 bottom-20 hidden lg:block opacity-30">
-        <svg width="100" height="200" viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 10C50 50 50 150 10 190" stroke="#7E7E7E" strokeWidth="2" strokeDasharray="5 5"/>
-
+        <svg
+          width="100"
+          height="200"
+          viewBox="0 0 100 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 10C50 50 50 150 10 190"
+            stroke="#7E7E7E"
+            strokeWidth="2"
+            strokeDasharray="5 5"
+          />
         </svg>
       </div>
 
@@ -50,15 +62,14 @@ const Destinations = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14 px-4 md:px-10">
         {destinations.map((dest) => (
-          <div 
-            key={dest.id} 
+          <div
+            key={dest.id}
             className="bg-white rounded-[24px] shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden cursor-pointer group"
           >
-
             <div className="h-[300px] md:h-[350px] overflow-hidden">
-              <img 
-                src={dest.image} 
-                alt={dest.location} 
+              <img
+                src={dest.image}
+                alt={dest.location}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
@@ -68,9 +79,8 @@ const Destinations = () => {
                 <span className="text-lg font-medium">{dest.location}</span>
                 <span className="text-lg font-medium">{dest.price}</span>
               </div>
-              
-              <div className="flex items-center gap-3">
 
+              <div className="flex items-center gap-3">
                 <img src={NavigationIcon} alt="nav" className="w-4 h-4" />
                 <span className="text-sm font-medium">{dest.duration}</span>
               </div>
