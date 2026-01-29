@@ -4,8 +4,6 @@ import Logo from '../assets/logo.png';
 const Login = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-white relative overflow-hidden font-sans px-4">
-      
-      {/* Background Decore (Same as Hero) */}
       <div className="absolute top-0 right-0 -z-0 opacity-50 pointer-events-none">
         <div className="w-[300px] h-[300px] md:w-[500px] bg-[#FFF1DA] blur-[100px] rounded-full"></div>
       </div>

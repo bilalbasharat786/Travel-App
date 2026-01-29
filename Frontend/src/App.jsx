@@ -20,7 +20,6 @@ function App() {
 <Router>
       <Navbar />
       <Routes>
-        {/* Home Page jis mein Hero section hai */}
         <Route path="/" element={<Hero />} />
         <Route path="/" element={<ServicesSection />} />
         <Route path="/" element={<Destinations />} />
@@ -28,8 +27,6 @@ function App() {
         <Route path="/" element={<TestimonialSection />} />
         <Route path="/" element={<SubscribeSection />} />
         <Route path="/" element={<Footer />} />
-        
-        {/* Alag Pages jo scroll nahi balkay click par khulenge */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>

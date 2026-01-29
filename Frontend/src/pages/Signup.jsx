@@ -4,8 +4,6 @@ import Logo from '../assets/logo.png';
 const Signup = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-white relative overflow-hidden font-sans px-4 py-10">
-      
-      {/* Decorative Blob (Left Side for variety) */}
       <div className="absolute bottom-0 left-0 -z-0 opacity-40 pointer-events-none">
         <div className="w-[300px] h-[300px] md:w-[500px] bg-[#DFD7F9] blur-[100px] rounded-full"></div>
       </div>
