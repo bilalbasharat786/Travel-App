@@ -40,7 +40,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto font-sans relative">
+    <section id='flights' className="py-16 px-4 max-w-7xl mx-auto font-sans relative">
       {/* Top Right Decorative Plus Signs */}
       <div className="absolute top-10 right-10 hidden md:block opacity-20 text-orange-500 text-xl font-bold">
         + + + +

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,20 +11,29 @@ import BookingSection from './components/BookingSection.jsx'
 import TestimonialSection from './components/TestimonialSection.jsx'
 import SubscribeSection from './components/SubscribeSection.jsx'
 import Footer from './components/Footer.jsx'
+import Signup from './pages/Signup.jsx'
+import Login from './pages/Login.jsx'
 
 function App() {
   
   return (
-    <>
+<Router>
       <Navbar />
-      <Hero />
-      <ServicesSection />
-      <Destinations />
-      <BookingSection />
-      <TestimonialSection />
-      <SubscribeSection />
-      <Footer />
-  </>
+      <Routes>
+        {/* Home Page jis mein Hero section hai */}
+        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<ServicesSection />} />
+        <Route path="/" element={<Destinations />} />
+        <Route path="/" element={<BookingSection />} />
+        <Route path="/" element={<TestimonialSection />} />
+        <Route path="/" element={<SubscribeSection />} />
+        <Route path="/" element={<Footer />} />
+        
+        {/* Alag Pages jo scroll nahi balkay click par khulenge */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+    </Router>
   )
 }
 

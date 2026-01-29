@@ -32,7 +32,7 @@ const Destinations = () => {
   ];
 
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto relative overflow-hidden">
+    <section id="destinations" className="py-20 px-6 max-w-7xl mx-auto relative overflow-hidden">
       
       {/* Background Decorative Spiral (Right Side) */}
       <div className="absolute right-0 bottom-20 hidden lg:block opacity-30">

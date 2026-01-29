@@ -4,7 +4,7 @@ import SendIcon from '../assets/send-icon.png';
 const SubscribeSection = () => {
   return (
     // 'relative' yahan zaroori hai taaki SendIcon is section ke hisab se position ho
-    <section className="py-20 px-6 md:px-12 relative w-full overflow-hidden">
+    <section id="hotels" className="py-20 px-6 md:px-12 relative w-full overflow-hidden">
       
       {/* Decorative Plus Pattern */}
       <div className="absolute bottom-5 right-5 md:bottom-10 md:right-10 grid grid-cols-3 gap-2 opacity-30 -z-10">

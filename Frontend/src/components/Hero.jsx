@@ -4,21 +4,23 @@ import DecoreImage from '../assets/decore.png';
 
 const Hero = () => {
   return (
-    /* overflow-hidden zaroori hai taake decore image scrollbar na banaye */
-    <section className="relative w-full   flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-0 bg-white overflow-hidden">
+    /* Humne px-6 aur padding-top section se hata di hai taake decore corners se chipak jaye */
+    <section className="relative w-full flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-0 bg-white overflow-hidden">
       
       {/* --- BACKGROUND DECORE IMAGE --- */}
-      {/* Isko top-0 aur right-0 kiya hai taake ye Navbar ke peeche se start ho */}
-      <div className="absolute top-0 right-0 -z-0 border-current pointer-events-none">
+      {/* Is div ko humne absolute top-0 aur right-0 rakha hai taake ye corners se chipak jaye */}
+      <div className="absolute top-0 right-0 -z-0 pointer-events-none">
         <img 
           src={DecoreImage} 
           alt="background shape" 
-          className="w-[100px] md:w-[200px] lg:w-[300px] xl:w-[600px] object-contain"
+          /* Design ke mutabiq width ko thoda adjust kiya gaya hai */
+          className="w-[250px] md:w-[450px] lg:w-[650px] xl:w-[750px] h-auto object-contain"
         />
       </div>
 
       {/* Left Side: Text Content */}
-      <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left z-10">
+      {/* Padding humne yahan div par di hai taake text corners se door rahe, lekin background nahi */}
+      <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left z-10 px-6 lg:pl-20 pt-20 lg:pt-32 pb-20">
         <p className="text-[#DF6951] font-bold uppercase tracking-wide mb-4">
           Best Destinations around the world
         </p>
@@ -57,11 +59,11 @@ const Hero = () => {
       </div>
 
       {/* Right Side: Hero Image */}
-      <div className="flex-1 w-full  relative flex justify-center lg:justify-end z-10">
+      <div className="flex-1 w-full relative flex justify-center lg:justify-end z-10 pr-0 lg:pr-20 mt-10 lg:mt-0">
         <img 
           src={HeroImage} 
           alt="Traveler" 
-          className="w-full max-w-md lg:max-w-2xl object-contain" 
+          className="w-full max-w-md lg:max-w-2xl object-contain drop-shadow-md" 
         />
       </div>
 

@@ -38,7 +38,7 @@ const BookingSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+    <section id="bookings" className="py-20 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
       
       {/* Left Content: Steps */}
       <div className="w-full lg:w-1/2">
