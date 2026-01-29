@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar.jsx";
@@ -12,18 +11,26 @@ import Footer from "./components/Footer.jsx";
 import Signup from "./pages/Signup.jsx";
 import Login from "./pages/Login.jsx";
 
+const Home = () => {
+  return (
+    <>
+      <Hero />
+      <div id="flights"><ServicesSection /></div>
+      <div id="destinations"><Destinations /></div>
+      <div id="bookings"><BookingSection /></div>
+      <TestimonialSection />
+      <div id="hotels"><SubscribeSection /></div>
+      <Footer />
+    </>
+  );
+};
+
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/" element={<ServicesSection />} />
-        <Route path="/" element={<Destinations />} />
-        <Route path="/" element={<BookingSection />} />
-        <Route path="/" element={<TestimonialSection />} />
-        <Route path="/" element={<SubscribeSection />} />
-        <Route path="/" element={<Footer />} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
