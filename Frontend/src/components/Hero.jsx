@@ -1,15 +1,16 @@
 import React from "react";
 import HeroImage from "../assets/hero-img.png";
 import DecoreImage from "../assets/decore.png";
+import flightIcon from "../assets/flight-icon.png";
 
 const Hero = () => {
   return (
-    <section className="relative w-full flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-0 bg-white overflow-hidden">
-      <div className="absolute top-0 right-0 -z-0 pointer-events-none">
+    <section className=" relative w-full flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-0 bg-white overflow-hidden">
+      <div className=" absolute  top-0 right-0  -z-0 pointer-events-none">
         <img
           src={DecoreImage}
           alt="background shape"
-          className="w-[250px] md:w-[450px] lg:w-[650px] xl:w-[750px] h-auto object-contain"
+          className="mr-0 w-[250px] md:w-[450px] lg:w-[600px] xl:w-[750px] h-auto "
         />
       </div>
 
@@ -66,9 +67,10 @@ const Hero = () => {
         <img
           src={HeroImage}
           alt="Traveler"
-          className="w-full max-w-md lg:max-w-2xl object-contain drop-shadow-md"
+          className="w-full mt-20 mr-20 max-w-md lg:max-w-2xl object-contain drop-shadow-md"
         />
       </div>
+      
     </section>
   );
 };
