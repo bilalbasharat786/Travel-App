@@ -63,14 +63,27 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="flex-1 w-full relative flex justify-center lg:justify-end z-10 pr-0 lg:pr-20 mt-10 lg:mt-0">
+      <div className=" flex-1 w-full relative flex justify-center lg:justify-end z-10 pr-0 lg:pr-20 mt-10 lg:mt-0">
         <img
           src={HeroImage}
           alt="Traveler"
-          className="w-full mt-20 mr-20 max-w-md lg:max-w-2xl object-contain drop-shadow-md"
+          className=" w-full mt-20 mr-20 max-w-md lg:max-w-2xl object-contain drop-shadow-md"
         />
       </div>
-      
+      <div>
+        <img
+          src={flightIcon}
+          alt="flight icon"
+          className="absolute top-[130px] left-[720px] w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 "
+        />
+      </div>
+      <div>
+       <img
+          src={flightIcon}
+          alt="flight icon"
+          className="absolute top-[160px] left-[1140px] w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 "
+        />
+      </div>
     </section>
   );
 };
