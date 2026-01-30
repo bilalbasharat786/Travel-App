@@ -4,18 +4,12 @@ import Logo from "../assets/logo.png";
 const Login = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-white relative overflow-hidden font-sans px-4 sm:px-6">
-      
-      {/* Background Blob 1 (Top Right) - Mobile par size adjust kiya */}
       <div className="absolute top-[-50px] right-[-50px] md:top-0 md:right-0 opacity-60 pointer-events-none">
         <div className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] bg-[#FFF1DA] blur-[80px] md:blur-[100px] rounded-full"></div>
       </div>
-
-      {/* Background Blob 2 (Bottom Left) - Balance ke liye add kiya */}
       <div className="absolute bottom-[-50px] left-[-50px] md:bottom-0 md:left-0 opacity-40 pointer-events-none">
         <div className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-[#DF6951] blur-[100px] rounded-full"></div>
       </div>
-
-      {/* Login Card */}
       <div className="max-w-md w-full bg-white/90 backdrop-blur-xl p-6 sm:p-8 md:p-10 rounded-[30px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-gray-100 z-10 relative">
         <div className="text-center mb-8 md:mb-10">
           <img src={Logo} alt="Jadoo" className="h-8 md:h-10 mx-auto mb-4 md:mb-6" />

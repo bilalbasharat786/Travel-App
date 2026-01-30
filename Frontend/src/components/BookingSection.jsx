@@ -40,7 +40,7 @@ const BookingSection = () => {
       id="bookings"
       className="py-16 md:py-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-20 overflow-hidden lg:overflow-visible"
     >
-      {/* Left Side: Steps Content */}
+
       <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
         <p className="text-[#5E6282] font-bold text-base md:text-lg mb-2 uppercase tracking-wide">
           Easy and Fast
@@ -72,10 +72,8 @@ const BookingSection = () => {
         </div>
       </div>
 
-      {/* Right Side: Cards Visual */}
       <div className="w-full lg:w-1/2 relative flex justify-center items-center mt-10 lg:mt-0">
-        
-        {/* Main Trip Card */}
+
         <div className="bg-white rounded-[26px] shadow-[0px_100px_80px_rgba(0,0,0,0.02),0px_41px_33px_rgba(0,0,0,0.01)] p-5 md:p-6 w-full max-w-[370px] relative z-10 transition-transform hover:rotate-2 duration-500">
           <img
             src={GreeceTripImg}
@@ -114,7 +112,6 @@ const BookingSection = () => {
           </div>
         </div>
 
-        {/* Small Floating Card (Ongoing Trip) */}
         <div className="absolute -bottom-6 -right-2 md:-right-12 lg:-right-20 bg-white shadow-2xl rounded-[20px] p-4 flex gap-4 w-[220px] md:w-[260px] z-20 transition-all hover:scale-105 duration-300">
           <img
             src={RomeMiniImg}
@@ -135,7 +132,6 @@ const BookingSection = () => {
           </div>
         </div>
 
-        {/* Background Glow Effect */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-[#59B1E6] opacity-15 blur-[80px] md:blur-[120px] -z-10 rounded-full"></div>
       </div>
     </section>

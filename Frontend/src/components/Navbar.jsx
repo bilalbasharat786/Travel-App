@@ -33,12 +33,11 @@ const Navbar = () => {
           : "bg-transparent py-8"
       }`}
     >
-      {/* Logo Section */}
+
       <div className="flex items-center">
         <img src={Logo} alt="Jadoo Logo" className="h-6 md:h-8 cursor-pointer" />
       </div>
 
-      {/* Desktop Menu (LG screens and above) */}
       <div className="hidden lg:flex items-center space-x-16">
         <ul className="flex space-x-12 font-medium text-[#212832]">
           {menuItems.map((item, index) => (
@@ -64,7 +63,6 @@ const Navbar = () => {
             Sign up
           </Link>
 
-          {/* Language Selector */}
           <div className="flex items-center cursor-pointer group">
             <span className="mr-1 group-hover:text-orange-500">EN</span>
             <svg
@@ -86,7 +84,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Hamburger Icon (Mobile & Tablet) */}
       <div className="lg:hidden flex items-center">
         <button
           onClick={() => setNavOpen(!navOpen)}
@@ -117,7 +114,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile/Tablet Drawer Menu */}
       <div
         className={`fixed top-0 left-0 w-full h-screen bg-white transition-transform duration-500 ease-in-out transform ${
           navOpen ? "translate-x-0" : "translate-x-full"

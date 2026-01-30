@@ -12,10 +12,9 @@ const Footer = () => {
   return (
     <footer className="bg-white pt-20 pb-10 px-6 md:px-12 lg:px-20 font-sans">
       <div className="max-w-7xl mx-auto">
-        {/* Grid Layout: Mobile (1 col), Tablet (3 cols), Desktop (5/6 cols) */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-12 mb-16">
-          
-          {/* Column 1: Logo & Description (Wide on large screens) */}
+
           <div className="sm:col-span-2 md:col-span-3 lg:col-span-2 text-center lg:text-left flex flex-col items-center lg:items-start">
             <h1 className="text-5xl font-bold text-[#181E4B] mb-6 tracking-tight">Jadoo.</h1>
             <p className="text-[#5E6282] text-sm md:text-base font-medium max-w-xs leading-relaxed">
@@ -23,7 +22,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Column 2: Company Links */}
           <div className="text-center md:text-left">
             <h4 className="font-bold text-xl mb-6 text-[#080809]">Company</h4>
             <ul className="text-[#5E6282] space-y-4 text-base font-medium">
@@ -33,7 +31,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Contact Links */}
           <div className="text-center md:text-left">
             <h4 className="font-bold text-xl mb-6 text-[#080809]">Contact</h4>
             <ul className="text-[#5E6282] space-y-4 text-base font-medium">
@@ -43,7 +40,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: More Links */}
           <div className="text-center md:text-left">
             <h4 className="font-bold text-xl mb-6 text-[#080809]">More</h4>
             <ul className="text-[#5E6282] space-y-4 text-base font-medium">
@@ -53,9 +49,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 5: Social & App Buttons (Wraps on tablet) */}
           <div className="sm:col-span-2 md:col-span-3 lg:col-span-1 flex flex-col items-center lg:items-start gap-6 mt-4 lg:mt-0">
-            {/* Social Icons */}
+
             <div className="flex gap-5">
               <div className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-black hover:bg-gray-100 cursor-pointer transition-all hover:-translate-y-1">
                 <FontAwesomeIcon icon={faFacebookF} className="text-lg" />
@@ -73,12 +68,10 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* App Store Heading */}
             <h4 className="text-[#5E6282] font-medium text-xl mt-2">
               Discover our app
             </h4>
 
-            {/* Store Buttons */}
             <div className="flex flex-row gap-3">
               <img
                 src={googlePlay}
@@ -94,7 +87,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Copyright Section */}
         <div className="mt-16 text-center border-t border-gray-100 pt-8">
           <p className="text-[#5E6282] text-sm font-medium">
             All rights reserved @jadoo.co
