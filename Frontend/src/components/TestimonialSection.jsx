@@ -89,17 +89,17 @@ const TestimonialSection = () => {
           <img
             src={AxonLogo}
             alt="Axon"
-            className="h-8 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+            className="h-20 md:h-24 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
           />
           <img
             src={JetstarLogo}
             alt="Jetstar"
-            className="h-8 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+            className="h-20 md:h-24  object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
           />
           <img
             src={ExpediaLogo}
             alt="Expedia"
-            className="h-8 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+            className="h-20 md:h-24  object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
           />
           <img
             src={QantasLogo}

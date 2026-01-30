@@ -59,7 +59,7 @@ const SubscribeSection = () => {
           </div>
         </div>
         <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 z-20">
-          <div className="relative w-14 h-14 md:w-20 md:h-20 bg-gradient-to-br from-[#747DEF] to-[#5E3BE1] rounded-full flex items-center justify-center shadow-xl animate-bounce-slow">
+          <div className="relative w-15 h-15 md:w-20 md:h-20 bg-gradient-to-br  flex items-center justify-center  animate-bounce-slow">
             <img
               src={SendIcon}
               alt="Send Icon"

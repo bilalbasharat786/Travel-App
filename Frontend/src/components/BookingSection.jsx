@@ -17,21 +17,19 @@ const BookingSection = () => {
       title: "Choose Destination",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.",
       icon: DestinationIcon,
-      bgColor: "bg-[#F1A501]",
     },
     {
       id: 2,
       title: "Make Payment",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.",
       icon: PaymentIcon,
-      bgColor: "bg-[#DF6951]",
     },
     {
       id: 3,
       title: "Reach Airport on Selected Date",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.",
       icon: AirportIcon,
-      bgColor: "bg-[#006380]",
+      
     },
   ];
 
@@ -54,7 +52,7 @@ const BookingSection = () => {
               className="flex flex-col sm:flex-row items-center sm:items-start gap-5 group"
             >
               <div
-                className={`${step.bgColor} p-3 rounded-xl shadow-md transition-transform group-hover:scale-110`}
+                className={`${step.bgColor} p-3 rounded-xl h-30 w-30 transition-transform group-hover:scale-110`}
               >
                 <img
                   src={step.icon}
