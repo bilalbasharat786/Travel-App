@@ -5,28 +5,29 @@ import flightIcon from "../assets/flight-icon.png";
 
 const Hero = () => {
   return (
-    <section className=" relative w-full flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-0 bg-white overflow-hidden">
-      <div className=" absolute  top-0 right-0  -z-0 pointer-events-none">
+    <section className="relative w-full min-h-screen flex flex-col lg:flex-row items-center bg-white overflow-hidden pt-20 lg:pt-0">
+      
+      {/* Background Decore - Responsive Sizing */}
+      <div className="absolute top-0 right-0 -z-0 pointer-events-none">
         <img
           src={DecoreImage}
           alt="background shape"
-          className="mr-0 w-[250px] md:w-[450px] lg:w-[600px] xl:w-[750px] h-auto "
+          className="w-[300px] md:w-[500px] lg:w-[650px] xl:w-[750px] h-auto"
         />
       </div>
 
-      <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left z-10 px-6 lg:pl-20 pt-20 lg:pt-32 pb-20">
-        <p className="text-[#DF6951] font-bold uppercase tracking-wide mb-4">
+      {/* Text Content Section */}
+      <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left z-10 px-6 md:px-12 lg:pl-20 py-10 lg:py-0">
+        <p className="text-[#DF6951] font-bold uppercase tracking-widest text-sm md:text-base mb-4">
           Best Destinations around the world
         </p>
 
-        <h1 className="text-[#181E4B] font-bold text-4xl sm:text-5xl lg:text-[75px] leading-[1.1] font-serif mb-6">
+        <h1 className="text-[#181E4B] font-bold text-4xl sm:text-5xl md:text-6xl lg:text-[70px] xl:text-[80px] leading-[1.1] font-serif mb-6">
           Travel,{" "}
           <span className="relative z-10 inline-block">
             enjoy
             <svg
               className="absolute -bottom-1 lg:-bottom-2 left-0 w-full -z-10"
-              width="385"
-              height="12"
               viewBox="0 0 385 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -39,16 +40,15 @@ const Hero = () => {
               />
             </svg>
           </span>
-          and live a new and full life
+          <br className="hidden md:block" /> and live a new and full life
         </h1>
 
-        <p className="text-[#5E6282] font-medium text-base lg:text-lg leading-relaxed max-w-md mb-8">
+        <p className="text-[#5E6282] font-medium text-base md:text-lg leading-relaxed max-w-md mb-8">
           Built Wicket longer admire do barton vanity itself do in it. Preferred
-          to sportsmen it engrossed listening. Park gate sell they west hard for
-          the.
+          to sportsmen it engrossed listening.
         </p>
 
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6">
           <button className="bg-[#F1A501] text-white font-medium px-7 py-4 rounded-lg shadow-lg hover:shadow-[#F1A501]/30 transition-all transform hover:-translate-y-1">
             Find out more
           </button>
@@ -63,26 +63,28 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className=" flex-1 w-full relative flex justify-center lg:justify-end z-10 pr-0 lg:pr-20 mt-10 lg:mt-0">
-        <img
-          src={HeroImage}
-          alt="Traveler"
-          className=" w-full mt-20 mr-20 max-w-md lg:max-w-2xl object-contain drop-shadow-md"
-        />
-      </div>
-      <div>
-        <img
-          src={flightIcon}
-          alt="flight icon"
-          className="absolute top-[130px] left-[720px] w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 "
-        />
-      </div>
-      <div>
-       <img
-          src={flightIcon}
-          alt="flight icon"
-          className="absolute top-[160px] left-[1140px] w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 "
-        />
+
+      {/* Image Section with Flight Icons */}
+      <div className="flex-1 w-full relative flex justify-center lg:justify-end z-10 px-6 lg:pr-20 pb-20 lg:pb-0">
+        <div className="relative w-full max-w-md lg:max-w-2xl mt-10 lg:mt-20">
+          
+          {/* Main Hero Image */}
+          <img
+            src={HeroImage}
+            alt="Traveler"
+            className="w-full h-auto object-contain drop-shadow-2xl"
+          />
+
+          {/* Flight Icon 1 - Responsive Position */}
+          <img
+            src={flightIcon}
+            alt="flight"
+            className="absolute top-[10%] left-[-5%] md:left-0 w-12 md:w-20 lg:w-24 animate-bounce-slow"
+          />
+
+          {/* Flight Icon 2 - Responsive Position */}
+      
+        </div>
       </div>
     </section>
   );

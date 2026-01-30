@@ -32,9 +32,10 @@ const Destinations = () => {
   return (
     <section
       id="destinations"
-      className="py-20 px-6 max-w-7xl mx-auto relative overflow-hidden"
+      className="py-16 md:py-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto relative overflow-hidden"
     >
-      <div className="absolute right-0 bottom-20 hidden lg:block opacity-30">
+      {/* Decorative Swirl - Tablet/Mobile par hide rakha hai clean look ke liye */}
+      <div className="absolute right-0 bottom-20 hidden xl:block opacity-30 pointer-events-none">
         <svg
           width="100"
           height="200"
@@ -51,38 +52,52 @@ const Destinations = () => {
         </svg>
       </div>
 
-      <div className="text-center mb-12">
-        <p className="text-[#5E6282] font-semibold text-lg uppercase tracking-wide">
+      {/* Header */}
+      <div className="text-center mb-12 md:mb-16">
+        <p className="text-[#5E6282] font-bold text-sm md:text-lg uppercase tracking-[0.2em] mb-2">
           Top Selling
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold text-[#1E1D4C] mt-2 font-serif">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1E1D4C] font-serif">
           Top Destinations
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14 px-4 md:px-10">
+      {/* Grid: 1 column on Mobile, 2 on Tablet, 3 on Desktop */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
         {destinations.map((dest) => (
           <div
             key={dest.id}
-            className="bg-white rounded-[24px] shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden cursor-pointer group"
+            className="bg-white rounded-[24px] shadow-[0px_1.85px_3.15px_rgba(0,0,0,0.005),0px_8.15px_6.52px_rgba(0,0,0,0.01),0px_20px_13px_rgba(0,0,0,0.015),0px_38.52px_25.48px_rgba(0,0,0,0.02),0px_64.81px_46.85px_rgba(0,0,0,0.025),0px_100px_80px_rgba(0,0,0,0.03)] hover:shadow-2xl transition-all duration-500 cursor-pointer group"
           >
-            <div className="h-[300px] md:h-[350px] overflow-hidden">
+            {/* Image Container */}
+            <div className="h-[300px] sm:h-[320px] md:h-[350px] overflow-hidden rounded-t-[24px]">
               <img
                 src={dest.image}
                 alt={dest.location}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
               />
             </div>
 
-            <div className="p-6 text-[#5E6282]">
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-lg font-medium">{dest.location}</span>
-                <span className="text-lg font-medium">{dest.price}</span>
+            {/* Card Content */}
+            <div className="p-6 md:p-7 text-[#5E6282]">
+              <div className="flex justify-between items-center mb-5">
+                <span className="text-lg font-bold text-[#1E1D4C] group-hover:text-orange-500 transition-colors">
+                  {dest.location}
+                </span>
+                <span className="text-lg font-bold text-[#1E1D4C]">
+                  {dest.price}
+                </span>
               </div>
 
-              <div className="flex items-center gap-3">
-                <img src={NavigationIcon} alt="nav" className="w-4 h-4" />
-                <span className="text-sm font-medium">{dest.duration}</span>
+              <div className="flex items-center gap-4">
+                <img 
+                  src={NavigationIcon} 
+                  alt="nav" 
+                  className="w-4 h-4 transform group-hover:rotate-45 transition-transform duration-300" 
+                />
+                <span className="text-base font-bold text-[#5E6282]">
+                  {dest.duration}
+                </span>
               </div>
             </div>
           </div>

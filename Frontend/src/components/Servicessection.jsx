@@ -1,5 +1,4 @@
 import React from "react";
-
 import WeatherIcon from "../assets/weather-icon.png";
 import FlightIcon from "../assets/flight-icon.png";
 import EventsIcon from "../assets/mic-icon.png";
@@ -19,7 +18,7 @@ const ServicesSection = () => {
       title: "Best Flights",
       desc: "Engrossed listening. Park gate sell they west hard for the.",
       icon: FlightIcon,
-      highlight: true,
+      highlight: true, // Mark kiya gaya hai taaky mobile par bhi special lagy
     },
     {
       id: 3,
@@ -40,44 +39,57 @@ const ServicesSection = () => {
   return (
     <section
       id="flights"
-      className="py-16 px-4 max-w-7xl mx-auto font-sans relative"
+      className="py-20 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto font-sans relative overflow-visible"
     >
-      <div className="absolute top-10 right-10 hidden md:block opacity-20 text-orange-500 text-xl font-bold">
+      {/* Decorative Plus Signs - Mobile par chupa diya gaya hai (ya chota kiya hai) */}
+      <div className="absolute top-10 right-4 lg:right-10 opacity-30 text-[#DF6951] text-2xl font-bold tracking-[10px]">
         + + + +
       </div>
 
-      <div className="text-center mb-16">
-        <p className="uppercase tracking-widest text-gray-500 text-sm font-semibold mb-2">
+      {/* Header Section */}
+      <div className="text-center mb-16 md:mb-24">
+        <p className="uppercase tracking-[0.2em] text-[#5E6282] text-sm md:text-base font-bold mb-3">
           Category
         </p>
-        <h2 className="text-3xl md:text-5xl font-bold text-[#1E1D4C]">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#14183E]">
           We Offer Best Services
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6 lg:gap-8">
         {services.map((service) => (
           <div
             key={service.id}
-            className={`relative group p-8 rounded-[36px] transition-all duration-300 flex flex-col items-center text-center
-              ${service.highlight ? "bg-white shadow-2xl z-10" : "bg-transparent hover:bg-white hover:shadow-xl"}`}
+            className={`relative group p-8 lg:p-10 rounded-[36px] transition-all duration-500 flex flex-col items-center text-center 
+              ${
+                service.highlight 
+                  ? "bg-white shadow-[0px_100px_80px_rgba(0,0,0,0.02),0px_41px_33px_rgba(0,0,0,0.01)]" 
+                  : "bg-transparent hover:bg-white hover:shadow-2xl"
+              }`}
           >
-            {service.highlight && (
-              <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-[#DF6951] rounded-tl-[30px] rounded-br-[15px] -z-10"></div>
-            )}
+            {/* Highlight Rectangle - Orange Shape (Desktop par hover par aata hai) */}
+            <div 
+              className={`absolute -bottom-5 -left-5 w-24 h-24 bg-[#DF6951] rounded-tl-[30px] rounded-br-[15px] -z-10 transition-opacity duration-300
+              ${service.highlight ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
+            ></div>
 
-            <div className="mb-6 h-20 flex items-center justify-center">
+            {/* Icon Container */}
+            <div className="mb-8 h-24 flex items-center justify-center">
               <img
                 src={service.icon}
                 alt={service.title}
-                className="max-h-full object-contain"
+                className="max-h-full w-auto object-contain transform transition-transform group-hover:scale-110 duration-300"
               />
             </div>
 
-            <h3 className="text-lg font-bold text-[#1E1D4C] mb-4">
+            {/* Title */}
+            <h3 className="text-xl font-bold text-[#1E1D4C] mb-4">
               {service.title}
             </h3>
-            <p className="text-gray-500 leading-relaxed text-sm px-2">
+
+            {/* Description */}
+            <p className="text-[#5E6282] leading-relaxed text-base font-medium">
               {service.desc}
             </p>
           </div>

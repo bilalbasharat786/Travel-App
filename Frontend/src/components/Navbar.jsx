@@ -27,16 +27,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed overflow-hidden w-full top-0 px-6 py-8 lg:px-20 flex items-center justify-between z-[100] transition-all duration-300 ${
+      className={`fixed w-full top-0 px-6 py-5 lg:px-20 flex items-center justify-between z-[100] transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-md shadow-sm "
-          : "bg-transparent"
+          ? "bg-white/90 backdrop-blur-md shadow-md py-4"
+          : "bg-transparent py-8"
       }`}
     >
+      {/* Logo Section */}
       <div className="flex items-center">
-        <img src={Logo} alt="Jadoo Logo" className="h-8 cursor-pointer" />
+        <img src={Logo} alt="Jadoo Logo" className="h-6 md:h-8 cursor-pointer" />
       </div>
 
+      {/* Desktop Menu (LG screens and above) */}
       <div className="hidden lg:flex items-center space-x-16">
         <ul className="flex space-x-12 font-medium text-[#212832]">
           {menuItems.map((item, index) => (
@@ -55,7 +57,6 @@ const Navbar = () => {
           <Link to="/login" className="hover:text-orange-500 transition-colors">
             Login
           </Link>
-
           <Link
             to="/signup"
             className="border border-[#212832] px-6 py-2 rounded-md hover:bg-[#212832] hover:text-white transition-all"
@@ -63,6 +64,7 @@ const Navbar = () => {
             Sign up
           </Link>
 
+          {/* Language Selector */}
           <div className="flex items-center cursor-pointer group">
             <span className="mr-1 group-hover:text-orange-500">EN</span>
             <svg
@@ -84,10 +86,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="lg:hidden">
+      {/* Hamburger Icon (Mobile & Tablet) */}
+      <div className="lg:hidden flex items-center">
         <button
           onClick={() => setNavOpen(!navOpen)}
-          className="text-[#181E4B] focus:outline-none"
+          className="text-[#181E4B] z-[110] relative focus:outline-none"
         >
           <svg
             className="w-8 h-8"
@@ -114,38 +117,43 @@ const Navbar = () => {
         </button>
       </div>
 
-      {navOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-2xl py-8 px-10 flex flex-col space-y-6 lg:hidden z-40 animate-fade-in">
-          <ul className="flex flex-col space-y-5 font-semibold text-[#212832]">
-            {menuItems.map((item, index) => (
-              <li key={index}>
-                <a
-                  href={item.href}
-                  className="text-xl hover:text-orange-500 block"
-                  onClick={() => setNavOpen(false)}
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="h-[1px] bg-gray-100 w-full"></div>
-          <div className="flex flex-col space-y-4">
-            <Link
-              to="/login"
-              className="hover:text-orange-500 transition-colors"
-            >
-              Login
-            </Link>
-            <Link
-              to="/signup"
-              className="border border-[#212832] px-6 py-2 rounded-md hover:bg-[#212832] hover:text-white transition-all"
-            >
-              Sign up
-            </Link>
-          </div>
+      {/* Mobile/Tablet Drawer Menu */}
+      <div
+        className={`fixed top-0 left-0 w-full h-screen bg-white transition-transform duration-500 ease-in-out transform ${
+          navOpen ? "translate-x-0" : "translate-x-full"
+        } lg:hidden z-[105] flex flex-col items-center justify-center space-y-8`}
+      >
+        <ul className="flex flex-col items-center space-y-6 font-semibold text-[#212832] text-2xl">
+          {menuItems.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.href}
+                className="hover:text-orange-500"
+                onClick={() => setNavOpen(false)}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+        
+        <div className="flex flex-col items-center space-y-6 w-full px-10">
+          <Link
+            to="/login"
+            className="text-2xl font-semibold hover:text-orange-500"
+            onClick={() => setNavOpen(false)}
+          >
+            Login
+          </Link>
+          <Link
+            to="/signup"
+            className="w-full text-center border-2 border-[#212832] px-8 py-3 rounded-md text-xl font-bold hover:bg-[#212832] hover:text-white transition-all"
+            onClick={() => setNavOpen(false)}
+          >
+            Sign up
+          </Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
